@@ -67,24 +67,24 @@ def test(model, device, test_loader, criterion):
         100. * correct / len(test_loader.dataset)))
     
 
-    def get_loader(data, kwargs):
-       return torch.utils.data.DataLoader(data, **kwargs)
-    
-    def view_data(loader):
-        batch_data, batch_label = next(iter(loader))
+def get_loader(data, kwargs):
+   return torch.utils.data.DataLoader(data, **kwargs)
 
-        fig = plt.figure()
+def view_data(loader):
+    batch_data, batch_label = next(iter(loader))
 
-        for i in range(12):
-            plt.subplot(3,4,i+1)
-            plt.tight_layout()
-            plt.imshow(batch_data[i].squeeze(0), cmap='gray')
-            plt.title(batch_label[i].item())
-            plt.xticks([])
-            plt.yticks([])
+    fig = plt.figure()
 
-    def load_model_and_show_summary():
-        use_cuda = torch.cuda.is_available()
-        device = torch.device("cuda" if use_cuda else "cpu")
-        model = Net().to(device)
-        summary(model, input_size=(1, 28, 28))
+    for i in range(12):
+        plt.subplot(3,4,i+1)
+        plt.tight_layout()
+        plt.imshow(batch_data[i].squeeze(0), cmap='gray')
+        plt.title(batch_label[i].item())
+        plt.xticks([])
+        plt.yticks([])
+
+def load_model_and_show_summary():
+    use_cuda = torch.cuda.is_available()
+    device = torch.device("cuda" if use_cuda else "cpu")
+    model = Net().to(device)
+    summary(model, input_size=(1, 28, 28))
