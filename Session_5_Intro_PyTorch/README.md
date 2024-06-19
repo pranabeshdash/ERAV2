@@ -8,7 +8,7 @@
 
 ### Data Description
 
-![Sample Data](https://raw.githubusercontent.com/garima-mahato/ERA_V1/main/Session5_IntroductionToPyTorch/images/data_sample.png)
+![Sample Data](https://github.com/pranabeshdash/ERAV2/blob/main/Session_5_Intro_PyTorch/images/data_sample.png)
 
 ---
 ### Model Description
