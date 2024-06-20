@@ -22,7 +22,7 @@ def set_device():
 def GetCorrectPredCount(pPrediction, pLabels):
   return pPrediction.argmax(dim=1).eq(pLabels).sum().item()
 
-def train(model, device, train_loader, optimizer, criterion):
+def train(model, device, train_loader, optimizer, criterion, train_acc, train_losses):
     model.train()
     pbar = tqdm(train_loader)
 
@@ -53,7 +53,7 @@ def train(model, device, train_loader, optimizer, criterion):
     train_acc.append(100*correct/processed)
     train_losses.append(train_loss/len(train_loader))
 
-def test(model, device, test_loader, criterion):
+def test(model, device, test_loader, criterion, test_acc, test_losses):
     model.eval()
 
     test_loss = 0
