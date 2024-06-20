@@ -8,6 +8,17 @@ from torchsummary import summary
 
 from tqdm import tqdm
 
+def set_device():
+    """set device as with/without cuda based on availability
+
+    Returns:
+        string: returns "cuda" f cuda is available else "cpu"
+    """
+    use_cuda = torch.cuda.is_available()
+    device = torch.device("cuda" if use_cuda else "cpu")
+
+    return device
+  
 def GetCorrectPredCount(pPrediction, pLabels):
   return pPrediction.argmax(dim=1).eq(pLabels).sum().item()
 
