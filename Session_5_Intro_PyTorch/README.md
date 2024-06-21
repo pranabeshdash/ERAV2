@@ -4,7 +4,6 @@
 
 |Code Link |
 |---|
-|[ Google Colab](https://colab.research.google.com/drive/1YKgmiPI79vy6j6lY24tmb5KU8sYOtS_h)|
 
 ### Data Description
 
