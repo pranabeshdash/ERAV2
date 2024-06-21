@@ -1,6 +1,6 @@
 [<- Back](https://github.com/pranabeshdash/ERAV2/)
 
-# Session 5: Introduction to Pytorch - MNIST Classifier
+# Session 7: Indepth Coding Practive
 
 |Code Link |
 |---|
